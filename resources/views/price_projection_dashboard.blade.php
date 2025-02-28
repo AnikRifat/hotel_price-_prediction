@@ -6,9 +6,6 @@
         table { width: 100%; border-collapse: collapse; }
         th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
         th { background-color: #f2f2f2; }
-        .low { color: green; }
-        .medium { color: orange; }
-        .high { color: red; }
     </style>
 </head>
 <body>
@@ -20,10 +17,9 @@
                 <th>Room Type</th>
                 <th>Projected Price (BDT)</th>
                 <th>Historical Avg Price (BDT)</th>
-                <th>Demand (%)</th>
-                <th>Demand Level</th>
                 <th>Competitor Prices</th>
                 <th>Avg Competitor Price (BDT)</th>
+                <th>Reason for Projected Price</th>
             </tr>
         </thead>
         <tbody>
@@ -34,14 +30,13 @@
                         <td>{{ $roomType }}</td>
                         <td>{{ number_format($data['projected_price'], 2) }}</td>
                         <td>{{ number_format($data['avg_price'], 2) }}</td>
-                        <td>{{ number_format($data['demand'], 2) }}</td>
-                        <td class="{{ strtolower($data['demand_level']) }}">{{ $data['demand_level'] }}</td>
                         <td>
                             @foreach ($data['competitors'] as $comp)
                                 {{ $comp['name'] }}: {{ number_format($comp['price'], 2) }}<br>
                             @endforeach
                         </td>
                         <td>{{ number_format($data['avg_competitor_price'], 2) }}</td>
+                        <td>{{ $data['reason'] }}</td>
                     </tr>
                 @endforeach
             @endforeach
