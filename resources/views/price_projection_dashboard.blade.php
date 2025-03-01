@@ -15,10 +15,10 @@
             <tr>
                 <th>Date</th>
                 <th>Room Type</th>
-                <th>Projected Price (BDT)</th>
-                <th>Historical Avg Price (BDT)</th>
+                <th>Projected Price (RM)</th>
+                <th>Historical Avg Price (RM)</th>
                 <th>Competitor Prices</th>
-                <th>Avg Competitor Price (BDT)</th>
+                <th>Avg Competitor Price (RM)</th>
                 <th>Reason for Projected Price</th>
             </tr>
         </thead>

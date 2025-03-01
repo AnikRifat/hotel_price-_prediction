@@ -21,6 +21,7 @@ return new class extends Migration
             $table->date('check_in_date');
             $table->date('check_out_date');
             $table->decimal('sales_price', 10, 2);
+            $table->decimal('price_per_day', 10, 2);
             $table->decimal('d2_hotel_occupancy', 5, 2);
             $table->decimal('average_competitor_price', 10, 2)->nullable();
             $table->integer('average_competitor_room_availability')->nullable();
